@@ -1,4 +1,4 @@
-function reverseString(str){
+/*function reverseString(str){
     const arr = str.split('');
     let reversedStr = '';
     
@@ -7,9 +7,12 @@ function reverseString(str){
     }
   
   return reversedStr;
-}
+}*/
 //Complexity: O(N) where n is the size of the string.
 
+function reverseString(str){
+  return str.split('').reverse().join('');
+}
 console.log(reverseString('cat'));
 console.log(reverseString('The Daily Byte'));
 console.log(reverseString('civic'));
