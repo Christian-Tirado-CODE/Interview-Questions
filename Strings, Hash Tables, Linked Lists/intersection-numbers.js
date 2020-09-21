@@ -31,6 +31,12 @@ const intersectionOfNumbers = (nums1, nums2) => {
   }
   // Time Complexity: O(N) where N is the size of nums1 and nums2
   // Space Complexity: O(N) where N is the size of nums1.
+
+  /* 
+  Source: The Daily Byte
+  Runtime: O(N) where N is the total number of elements in nums1 and nums2.
+  Space complexity: O(M) where M is the total number of elements in nums1.
+  */
   console.log(intersectionOfNumbers([2, 4, 4, 2], [2, 4]));
   console.log(intersectionOfNumbers([1, 2, 3, 3], [3, 3]));
   console.log(intersectionOfNumbers([2, 4, 6, 8], [1, 3, 5, 7]));
