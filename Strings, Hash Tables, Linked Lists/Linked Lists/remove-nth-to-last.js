@@ -5,7 +5,7 @@ class Node {
     }
   }
   
-  function removeNthNode(LL, n){
+  function removeNthToLastNode(LL, n){
       var head = LL;
       var current = head;
       var previous = current;
