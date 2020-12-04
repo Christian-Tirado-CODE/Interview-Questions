@@ -36,6 +36,26 @@ function isSamePosition(str){
   }
   */
 
+ const vaccumRouteCleaner = (moves) => {
+  let UD = 0;
+  let LR = 0;
+
+  for(let i=0; i < moves.length; i++){
+     switch(moves[i]){
+       case "U": UD++;
+                 break;
+       case "D": UD--;
+                 break;
+       case "R": LR++;
+                 break;
+       case "L": LR--;
+                 break;
+         
+     }
+  }
+
+return UD === LR;
+}
   /*
   Time Complexity: O(N) where N is the numbers of characters in the string
   Space Complexity: O(1) or Constant
