@@ -32,7 +32,7 @@ forwards and backwards.
   // Runtime: O(N) where n is the number of characters in the string.
   // Space complexity: O(N) because we need to create an array to check 
   // every character in the string.
-
+/*
   function isPalindrome(str) {
     var re = /[^A-Za-z0-9]/g;
     str = str.toLowerCase().replace(re, '');
@@ -43,7 +43,42 @@ forwards and backwards.
       }
     }
     return true;
+   }*/
+
+   function isPalindrome(str){
+   
+    if(str.length === 0 || str.length === 1)
+      return true;
+    
+      const sanitisedString = [...str].map((char) => {
+      const code = char.charCodeAt(0);
+  
+      if (code >= 97 && code <= 122) {
+          return char;
+      }
+  
+      if (code >= 65 && code <= 90) {
+          return String.fromCharCode(code + 32);
+      }
+  }).join('');
+    
+    let i = 0;
+    let j = sanitisedString.length - 1;
+    
+     while(i < j){
+        if(sanitisedString[i] !== sanitisedString[j])
+          return false;
+       
+       i++;
+       j--;
+     }
+      return true;
    }
+  
+  //https://medium.com/@beccasusandev/string-palindrome-check-javascript-solution-c6166f14cb6f
+  
+
+
    console.log(isPalindrome("A man, a plan, a canal: Panama."));
    console.log(isPalindrome("algorithm"));
    console.log(isPalindrome('"level"'));
